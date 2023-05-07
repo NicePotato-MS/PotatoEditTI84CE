@@ -2,14 +2,16 @@
 # Makefile Options
 # ----------------------------
 
-NAME = DEMO
+NAME = PTATOEDT
 ICON = icon.png
-DESCRIPTION = "CE C Toolchain Demo"
-COMPRESSED = NO
+DESCRIPTION = "PotatoEdit for the TI84+ CE"
+COMPRESSED = YES
+COMPRESSED_MODE = zx0
 ARCHIVED = NO
 
 CFLAGS = -Wall -Wextra -Oz
 CXXFLAGS = -Wall -Wextra -Oz
+HAS_PRINTF = NO
 
 # font options
 FONTPACKNAME = DRSANS

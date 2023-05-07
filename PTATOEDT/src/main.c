@@ -34,30 +34,6 @@ int main(void)
         gfx_PrintStringXY("1 not found", 0, 200);
     }
 
-    /* Try getting another font */
-    font_pack = fontlib_GetFontByStyle(font_pack_name, 9, 10, FONTLIB_NORMAL, FONTLIB_NORMAL, 0, FONTLIB_SERIF);
-    if (font_pack)
-    {
-        fontlib_SetFont(font_pack, 0);
-        fontlib_DrawString(test_str);
-    }
-    else
-    {
-        gfx_PrintStringXY("2 not found", 100, 200);
-    }
-
-    /* Try getting a non-existent font */
-    font_pack = fontlib_GetFontByStyle(font_pack_name, 30, 50, FONTLIB_NORMAL, FONTLIB_NORMAL, FONTLIB_SERIF, 0);
-    if (font_pack)
-    {
-        fontlib_SetFont(font_pack, 0);
-        fontlib_DrawString(test_str);
-    }
-    else
-    {
-        gfx_PrintStringXY("3 not found", 200, 200);
-    }
-
     /* Waits for a key */
     while (!os_GetCSC());
 
